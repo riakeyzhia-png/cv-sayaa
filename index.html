@@ -1,0 +1,732 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV Keyzhia Nurul Aulia">
+  <title>CV | Keyzhia Nurul Aulia</title>
+
+  <style>
+    :root {
+      --bg: #fff7fa;
+      --card: #ffffff;
+      --text: #49343d;
+      --muted: #806b74;
+      --pink: #d783a0;
+      --soft: #fbe4ec;
+      --border: #f0d3df;
+      --shadow: 0 8px 28px #b66e8512;
+    }
+
+    body.dark {
+      --bg: #20191e;
+      --card: #2d242b;
+      --text: #f8eaf0;
+      --muted: #cbb7c1;
+      --pink: #e5a1b9;
+      --soft: #48303b;
+      --border: #513b46;
+      --shadow: 0 8px 28px #00000025;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      transition: background .3s, color .3s;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    /* HEADER */
+    header {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 65px 20px 80px;
+      background: linear-gradient(135deg, #f4b9cc, #fce5ed);
+      border-radius: 0 0 45px 45px;
+    }
+
+    body.dark header {
+      background: linear-gradient(135deg, #704356, #392833);
+    }
+
+    .decor {
+      position: absolute;
+      color: #ffffffb8;
+      font-size: 32px;
+      pointer-events: none;
+    }
+
+    .d1 { top: 30px; left: 12%; }
+    .d2 { top: 75px; right: 14%; }
+    .d3 { bottom: 35px; left: 20%; }
+    .d4 { bottom: 45px; right: 19%; }
+
+    /* FOTO PROFIL */
+    .photo {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      border: 4px solid white;
+      overflow: hidden;
+      background: #ffffff80;
+      box-shadow: 0 4px 15px #b66e8530;
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.3;
+      margin-bottom: 8px;
+      color: #553441;
+      overflow-wrap: anywhere;
+    }
+
+    body.dark h1 {
+      color: #fff0f5;
+    }
+
+    .school {
+      font-size: 18px;
+      color: #704957;
+    }
+
+    body.dark .school {
+      color: #f1d5e0;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: #805968;
+    }
+
+    body.dark .subtitle {
+      color: #e3c2d0;
+    }
+
+    /* NAVIGASI */
+    nav {
+      position: sticky;
+      top: 10px;
+      z-index: 10;
+      width: min(900px, 92%);
+      margin: -25px auto 45px;
+      padding: 12px;
+      border-radius: 30px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      list-style: none;
+    }
+
+    nav a {
+      display: block;
+      padding: 6px 13px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      background: var(--soft);
+      color: var(--pink);
+    }
+
+    /* KONTEN UTAMA */
+    main {
+      width: min(900px, 90%);
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+      scroll-margin-top: 100px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      font-size: 28px;
+      line-height: 1.4;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .line {
+      width: 50px;
+      height: 4px;
+      background: var(--pink);
+      border-radius: 10px;
+      margin: 12px auto 0;
+    }
+
+    .card {
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    /* PROFIL */
+    .profile {
+      text-align: center;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* PENDIDIKAN */
+    .education h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 13px;
+      margin-bottom: 12px;
+      border-radius: 20px;
+      background: var(--soft);
+      color: var(--pink);
+      font-size: 13px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    /* KEAHLIAN */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .skill-icon {
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: var(--soft);
+      color: var(--pink);
+      font-size: 21px;
+    }
+
+    /* KONTAK */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 20px;
+    }
+
+    .contact-item {
+      padding: 14px;
+      margin-bottom: 12px;
+      border-radius: 14px;
+      background: var(--soft);
+    }
+
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    /* FORMULIR */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      margin-top: 6px;
+      padding: 13px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg);
+      color: var(--text);
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid var(--pink);
+      outline-offset: 1px;
+    }
+
+    /* TOMBOL */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 30px 0 65px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      background: var(--pink);
+      color: white;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: .85;
+    }
+
+    .btn-light {
+      background: var(--soft);
+      color: var(--text);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      z-index: 20;
+      right: 18px;
+      bottom: 18px;
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background: var(--pink);
+      color: white;
+      font-size: 21px;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 15px;
+      text-align: center;
+      color: var(--muted);
+      background: var(--soft);
+      border-radius: 35px 35px 0 0;
+    }
+
+    footer strong {
+      color: var(--pink);
+    }
+
+    /* TAMPILAN HP */
+    @media (max-width: 650px) {
+      header {
+        padding: 55px 18px 70px;
+      }
+
+      nav a {
+        padding: 5px 9px;
+        font-size: 12px;
+      }
+
+      .skills, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      section {
+        margin-bottom: 48px;
+      }
+
+      .decor {
+        font-size: 23px;
+      }
+    }
+
+    /* TAMPILAN CETAK / PDF */
+    @media print {
+      body, body.dark {
+        background: white;
+        color: black;
+      }
+
+      nav, .buttons, .theme-toggle,
+      .contact-grid form, footer {
+        display: none !important;
+      }
+
+      header {
+        border-radius: 0;
+        padding: 30px 10px;
+        background: #fbe4ec !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      h1, .school, .subtitle {
+        color: #49343d !important;
+      }
+
+      main {
+        width: 100%;
+      }
+
+      section {
+        margin-bottom: 25px;
+        break-inside: avoid;
+      }
+
+      .card {
+        box-shadow: none;
+        background: white;
+        border-color: #ddd;
+      }
+
+      .profile, .muted, .contact-item span {
+        color: #555;
+      }
+
+      .contact-grid {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <span class="decor d1">♡</span>
+    <span class="decor d2">✦</span>
+    <span class="decor d3">୨୧</span>
+    <span class="decor d4">♡</span>
+
+    <!-- FOTO PROFIL -->
+    <div class="photo">
+      <img src="foto-keyzhia.jpg"
+           alt="Foto profil Keyzhia Nurul Aulia">
+    </div>
+
+    <h1>Keyzhia Nurul Aulia</h1>
+    <p class="school">SMA Gunung Madu · XII B</p>
+    <p class="subtitle">Student Curriculum Vitae ♡</p>
+  </header>
+
+  <!-- NAVIGASI -->
+  <nav aria-label="Navigasi CV">
+    <ul>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#pendidikan">Pendidikan</a></li>
+      <li><a href="#keahlian">Keahlian</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- PROFIL SINGKAT -->
+    <section id="profil">
+      <div class="section-heading">
+        <h2>Profil Singkat</h2>
+        <p>About Me</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="card">
+        <p class="profile">
+          Saya orangnya cukup peka dan mudah memahami perasaan orang lain.
+          Kalau sudah dekat dengan seseorang, saya cenderung setia, perhatian,
+          dan suka memastikan orang yang saya sayangi baik-baik saja.
+          Saya juga cukup protektif, bukan karena ingin membatasi,
+          tapi karena saya peduli.
+        </p>
+      </div>
+    </section>
+
+    <!-- PENDIDIKAN -->
+    <section id="pendidikan">
+      <div class="section-heading">
+        <h2>Pendidikan</h2>
+        <p>Education</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="card education">
+        <span class="tag">Pendidikan saat ini</span>
+        <h3>SMA Gunung Madu</h3>
+        <p class="muted">Kelas XII B</p>
+        <br>
+        <p><strong>Mata Pelajaran Pilihan</strong></p>
+        <p class="muted">Physics · CIT · Math</p>
+      </div>
+    </section>
+
+    <!-- KEAHLIAN -->
+    <section id="keahlian">
+      <div class="section-heading">
+        <h2>Keahlian</h2>
+        <p>Skills</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="skills">
+        <div class="card skill">
+          <div class="skill-icon">✦</div>
+          <div>
+            <strong>Teliti</strong>
+            <p class="muted">
+              Dapat mengerjakan tugas dengan ketelitian yang tinggi.
+            </p>
+          </div>
+        </div>
+
+        <div class="card skill">
+          <div class="skill-icon">♡</div>
+          <div>
+            <strong>Berorientasi pada hasil</strong>
+            <p class="muted">
+              Selalu berusaha menyelesaikan tugas dengan sebaik mungkin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak">
+      <div class="section-heading">
+        <h2>Kontak</h2>
+        <p>Get in Touch</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- INFORMASI KONTAK -->
+        <div class="card">
+          <div class="contact-item">
+            <strong>✉ Email</strong>
+            <span>
+              <a href="mailto:riakeyzhia@gmail.com">
+                riakeyzhia@gmail.com
+              </a>
+            </span>
+          </div>
+
+          <div class="contact-item">
+            <strong>☎ Nomor HP</strong>
+            <span>
+              <a href="tel:081391477604">081391477604</a>
+            </span>
+          </div>
+
+          <div class="contact-item">
+            <strong>◎ Instagram</strong>
+            <span>
+              <a href="https://www.instagram.com/key.nrl/"
+                 target="_blank" rel="noopener noreferrer">
+                @key.nrl
+              </a>
+            </span>
+          </div>
+
+          <div class="contact-item">
+            <strong>⌖ Lokasi</strong>
+            <span>
+              Divisi 4, PT Gunung Madu Plantation, Lampung Tengah
+            </span>
+          </div>
+        </div>
+
+        <!-- FORMULIR PESAN -->
+        <div class="card">
+          <h3 style="margin-bottom:15px">Kirim Pesan ♡</h3>
+
+          <form id="contactForm">
+            <label for="name">
+              Nama
+              <input id="name" name="name" type="text"
+                     placeholder="Masukkan nama kamu" required>
+            </label>
+
+            <label for="email">
+              Email
+              <input id="email" name="email" type="email"
+                     placeholder="Masukkan email kamu" required>
+            </label>
+
+            <label for="message">
+              Pesan
+              <textarea id="message" name="message"
+                        placeholder="Tulis pesan kamu..."
+                        required></textarea>
+            </label>
+
+            <button class="btn" type="submit">
+              Kirim Pesan ✉
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TOMBOL DOWNLOAD DAN TEMA -->
+    <div class="buttons">
+      <button class="btn" type="button" onclick="downloadCV()">
+        ↓ Download CV (PDF)
+      </button>
+
+      <button class="btn btn-light" type="button"
+              onclick="toggleTheme()">
+        ◐ Ganti Tema
+      </button>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with ♡ by <strong>Keyzhia Nurul Aulia</strong></p>
+    <p>© 2026 · All Rights Reserved</p>
+  </footer>
+
+  <!-- TOMBOL TEMA MENGAMBANG -->
+  <button class="theme-toggle" type="button"
+          onclick="toggleTheme()"
+          id="themeButton" aria-label="Ganti tema">
+    ☾
+  </button>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mengganti tema terang dan gelap.
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+
+      const isDark = document.body.classList.contains("dark");
+
+      document.getElementById("themeButton").textContent =
+        isDark ? "☀" : "☾";
+
+      try {
+        localStorage.setItem(
+          "cv-theme",
+          isDark ? "dark" : "light"
+        );
+      } catch (error) {
+        // Website tetap berjalan tanpa penyimpanan.
+      }
+    }
+
+    // Mengingat tema yang terakhir dipilih.
+    try {
+      if (localStorage.getItem("cv-theme") === "dark") {
+        document.body.classList.add("dark");
+        document.getElementById("themeButton").textContent = "☀";
+      }
+    } catch (error) {
+      // Tema tetap bisa diganti secara manual.
+    }
+
+    // Membuka menu cetak agar CV bisa disimpan sebagai PDF.
+    function downloadCV() {
+      window.print();
+    }
+
+    // Membuka aplikasi email untuk mengirim pesan.
+    document.getElementById("contactForm").addEventListener(
+      "submit",
+      function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const subject = encodeURIComponent(
+          "Pesan dari website CV - " + name
+        );
+
+        const body = encodeURIComponent(
+          "Nama: " + name +
+          "\nEmail: " + email +
+          "\n\nPesan:\n" + message
+        );
+
+        window.location.href =
+          "mailto:riakeyzhia@gmail.com?subject=" +
+          subject + "&body=" + body;
+      }
+    );
+  </script>
+
+</body>
+</html>
